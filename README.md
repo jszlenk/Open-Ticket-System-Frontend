@@ -31,24 +31,22 @@
 
   ### Run App
 
+###### Run for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-###### Development server
-Run for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ```ng
 ng serve
 ```
 
-###### Build
-Run to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+###### Run to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
 ```ng
 ng build
 ```
-###### Running unit tests
-Run to execute the unit tests via [Karma](https://karma-runner.github.io).
+###### Run to execute the unit tests and  he end-to-end tests .
+
 ```ng
 ng test
 ```
-Run to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 ```ng
 ng e2e
 ```
