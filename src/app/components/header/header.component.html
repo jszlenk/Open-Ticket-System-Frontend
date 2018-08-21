@@ -1,0 +1,15 @@
+<header class="">
+  <a [routerLink]="['/']" class="">
+    <span class=""><b>Open Ticket</b></span>
+  </a>
+  <nav class="">
+    <a href="#" class="" role="">
+      <span class="">Toggle navigation</span>
+    </a>
+    <div class="">
+      <p>{{ shared.user.email }} | {{ shared.user.profile }} |
+        <button class="button" (click)="signOut()">Sign out</button>
+      </p>
+    </div>
+  </nav>
+</header>

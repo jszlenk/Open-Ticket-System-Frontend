@@ -1,0 +1,61 @@
+<aside class="">
+  <section class="">
+    <ul class="" data-widget="tree">
+      <li class="" *ngIf="shared.user.profile == 'ADMIN'">
+        <a href="#">
+          <i class=""></i>
+          <span>Users</span>
+          <span class="">
+            <i class=""></i>
+          </span>
+        </a>
+        <ul class="">
+          <li>
+            <a [routerLink]="['/user-list']"><i class=""></i>List
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/user-new']"><i class=""></i>New User
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="" *ngIf="shared.user.profile != 'ADMIN'">
+        <a href="#">
+          <i class=""></i>
+          <span>Ticket</span>
+          <span class="">
+            <i class=""></i>
+          </span>
+        </a>
+        <ul class="">
+          <li>
+            <a [routerLink]="['/ticket-list']"><i class=""></i>List
+            </a>
+          </li>
+          <li *ngIf="shared.user.profile == 'CUSTOMER'">
+            <a [routerLink]="['/ticket-new']">
+              <i class=""></i>
+              New Ticket
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="">
+        <a href="#">
+          <i class=""></i>
+          <span>Summary</span>
+          <span class="">
+            <i class=""></i>
+          </span>
+        </a>
+        <ul class="">
+          <li>
+            <a [routerLink]="['/summary']"><i class=""></i>To view
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</aside>

@@ -1,0 +1,10 @@
+<app-header [hidden]="!showTemplate"></app-header>
+<app-menu [hidden]="!showTemplate"></app-menu>
+<div [ngClass]="showContentWrapper()">
+  <section class="">
+  </section>
+  <section class="">
+    <router-outlet></router-outlet>
+  </section>
+</div>
+<app-footer [hidden]="!showTemplate"></app-footer>

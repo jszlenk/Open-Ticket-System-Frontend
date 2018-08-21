@@ -1,0 +1,41 @@
+<div [ngClass]="classCss" role="alert" *ngIf="message">
+  <strong>{{ message.text }}</strong>
+</div>
+<div class="">
+  <div class="">
+    <div class="">
+      <div class="">
+        <h3 class="">User List</h3>
+      </div>
+      <div class="">
+        <table class="">
+          <tr>
+            <th>Email</th>
+            <th>Profile</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+          </tr>
+          <tr *ngFor="let user of listUser">
+            <td>{{user.email}}</td>
+            <td>{{user.profile}}</td>
+            <td>
+              <button class="" (click)="edit(user.id)">Edit</button>
+            </td>
+            <td>
+              <button class="" (click)="delete(user.id)">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="">
+        <ul class="">
+          <li><a href="" (click)="setPreviousPage($event)">&laquo;</a></li>
+          <li *ngFor="let p of pages; let i=index">
+            <a [ngClass]="{'pagination-focus':i==page}" href="" (click)="setPage(i,$event)">{{i+1}}</a>
+          </li>
+          <li><a href="" (click)="setNextPage($event)">&raquo;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="">
+  <div class="">
+    <div class="">
+      <h3 class="">New Ticket</h3>
+    </div>
+    <form class="" #form="ngForm" (ngSubmit)="register()" novalidate>
+      <div [ngClass]="classCss" role="alert" *ngIf="message">
+        <strong>{{ message.text }}</strong>
+      </div>
+      <div class="">
+        <div [ngClass]="getFormGroupClass(title.invalid,title.dirty)">
+          <label for="inputTitle" class="">Title</label>
+          <div class="">
+            <input type="text"
+                   [(ngModel)]="ticket.title"
+                   name="title"
+                   class=""
+                   id="inputTitle"
+                   placeholder="Title"
+                   #title="ngModel"
+                   required>
+            <span class="" *ngIf="title.invalid && title.dirty">Title is required</span>
+          </div>
+        </div>
+        <div [ngClass]="getFormGroupClass(priority.invalid,priority.dirty)">
+          <label for="inputPriority" class="">Priority</label>
+          <div class="">
+            <select [(ngModel)]="ticket.priority"
+                    class=""
+                    name="priority"
+                    id="inputPriority"
+                    #priority="ngModel"
+                    required>
+              <option>High</option>
+              <option>Normal</option>
+              <option>Low</option>
+            </select>
+            <span class="" *ngIf="priority.invalid && priority.dirty">Priority is required</span>
+          </div>
+        </div>
+        <div [ngClass]="getFormGroupClass(description.invalid,description.dirty)">
+          <label for="inputDescription" class="">Description</label>
+          <div class="">
+            <textarea [(ngModel)]="ticket.description"
+                      name="description"
+                      rows="3"
+                      class=""
+                      id="inputDescription"
+                      placeholder="Description..."
+                      #description="ngModel"
+                      required>
+            </textarea>
+            <span class="" *ngIf="description.invalid && description.dirty">Description is required</span>
+          </div>
+        </div>
+        <div class="">
+          <label for="inputDescription" class="">Image</label>
+          <div class="">
+            <img [src]="ticket.image" width="50%" height="50%">
+            <input type="file" id="image" (change)="onFileChange($event)">
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <button type="submit" [disabled]="!form.valid" class="">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

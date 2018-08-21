@@ -1,0 +1,61 @@
+<div class="">
+  <div class="">
+    <div class="">
+      <h3 class="">New User</h3>
+    </div>
+    <form class="form-horizontal" #form="ngForm" (ngSubmit)="register()" novalidate>
+      <div [ngClass]="classCss" role="alert" *ngIf="message">
+        <strong>{{ message.text }}</strong>
+      </div>
+      <div class="">
+        <div [ngClass]="getFormGroupClass(email.invalid,email.dirty)">
+          <label for="inputEmail" class="">Email</label>
+          <div class="">
+            <input type="email"
+                   [(ngModel)]="user.email"
+                   name="email"
+                   class="form-control"
+                   id="inputEmail"
+                   #email="ngModel"
+                   placeholder="Email"
+                   email>
+            <span class="" *ngIf="email.invalid  && email.dirty">Email is invalid </span>
+          </div>
+        </div>
+        <div [ngClass]="getFormGroupClass(password.invalid,password.dirty)">
+          <label for="inputPassword" class="">Password</label>
+          <div class="">
+            <input type="password"
+                   [(ngModel)]="user.password"
+                   name="password"
+                   class=""
+                   id="inputPassword"
+                   placeholder="Password"
+                   #password="ngModel"
+                   required>
+            <span class="" *ngIf="password.invalid && password.dirty">Password is required</span>
+          </div>
+        </div>
+        <div [ngClass]="getFormGroupClass(profile.invalid,profile.dirty)">
+          <label for="inputProfile" class="">Profile</label>
+          <div class="">
+            <select [(ngModel)]="user.profile"
+                    class=""
+                    name="profile"
+                    id="inputProfile"
+                    #profile="ngModel"
+                    required>
+              <option>ROLE_ADMIN</option>
+              <option>ROLE_CUSTOMER</option>
+              <option>ROLE_TECHNICIAN</option>
+            </select>
+            <span class="" *ngIf="profile.invalid && profile.dirty">Profile is required</span>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <button type="submit" [disabled]="!form.valid" class="">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

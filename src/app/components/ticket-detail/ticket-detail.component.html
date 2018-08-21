@@ -1,0 +1,78 @@
+<div class="">
+  <div class="">
+    <div class="">
+      <h3 class="">Detail Ticket</h3>
+    </div>
+    <form class="" #form="ngForm" (ngSubmit)="register()" novalidate>
+      <div [ngClass]="classCss" role="alert" *ngIf="message">
+        <strong>{{ message.text }}</strong>
+      </div>
+      <div class="">
+        <ul class="">
+          <li class="">
+            <b>Number :</b> <span>{{ticket.number}}</span>
+            <span class=""><b>Title :</b> <span>{{ticket.title}}</span></span>
+          </li>
+          <li class="">
+            <b>Priority :</b> <span>{{ticket.priority}}</span>
+            <span class="">
+                <b>Create by  :</b> <span>{{ticket?.user?.email}}</span>
+              </span>
+          </li>
+          <li class="">
+            <b>Status :</b> <span>{{ticket.status}}</span>
+            <span class="">
+                  <b>Assigned To :</b> <span>{{ticket?.assignedUser?.email}}</span>
+                </span>
+          </li>
+          <li class="">
+            <b>Date :</b> <span>{{ticket.date | date:'dd/MM/yyyy'}}</span>
+          </li>
+          <li class="">
+            <b>Description :</b> <span>{{ticket.description}}</span>
+          </li>
+          <li class="">
+            <span><img [src]="ticket.image" width="450px" height="370px"></span>
+            <span class="">
+                  <table class="">
+                      <tr>
+                        <th>User Change</th>
+                        <th>Date Change Status</th>
+                        <th>Status</th>
+                      </tr>
+                      <tr *ngFor="let change of ticket.changes">
+                          <td>{{ change?.userChange.email}}</td>
+                          <td>{{ change?.dateChangeStatus | date:'dd/MM/yyyy HH:mm:ss'}}</td>
+                          <td>{{ change?.status }}</td>
+                      </tr>
+
+                  </table>
+                </span>
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <button *ngIf="shared.user.profile == 'TECHNICIAN' && ticket.status == 'New'"
+                (click)="changeStatus('Assigned')"
+                class="">Accept
+        </button>
+        <button *ngIf="shared.user.profile == 'TECHNICIAN' && (ticket.status == 'Assigned' || ticket.status == 'Disapproved')"
+                (click)="changeStatus('Resolved')"
+                class="">Solve
+        </button>
+        <button *ngIf="shared.user.profile == 'CUSTOMER' && ticket.status == 'Resolved'"
+                (click)="changeStatus('Approved')"
+                class="">Approve
+        </button>
+        <button *ngIf="shared.user.profile == 'CUSTOMER' && ticket.status == 'Resolved'"
+                (click)="changeStatus('Disapproved')"
+                class="">Disapprove
+        </button>
+        <button *ngIf="shared.user.profile == 'TECHNICIAN' && ticket.status == 'Approved'"
+                (click)="changeStatus('Closed')"
+                class="">Close
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

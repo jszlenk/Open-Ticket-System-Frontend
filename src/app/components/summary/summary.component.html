@@ -1,0 +1,38 @@
+<div class="">
+  <div [ngClass]="classCss" role="alert" *ngIf="message">
+    <strong>{{ message.text }}</strong>
+  </div>
+  <div class="">
+    <div class="">
+      <h3 class="">Summary</h3>
+    </div>
+    <div class="">
+      <ul class="">
+        <li class="">
+          <b>New :</b>
+          <span class=""><span>{{ summary?.amountNew }}</span></span>
+        </li>
+        <li class="">
+          <b>Resolved :</b>
+          <span class=""><span>{{ summary?.amountResolved }}</span></span>
+        </li>
+        <li class="">
+          <b>Approved :</b>
+          <span class=""><span>{{ summary?.amountApproved }}</span></span>
+        </li>
+        <li class="">
+          <b>Disapproved :</b>
+          <span class=""><span>{{ summary?.amountDisapproved }}</span></span>
+        </li>
+        <li class="">
+          <b>Assigned :</b>
+          <span class=""><span>{{ summary?.amountAssigned }}</span></span>
+        </li>
+        <li class="">
+          <b>Closed :</b>
+          <span class=""><span>{{ summary?.amountClosed }}</span></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
