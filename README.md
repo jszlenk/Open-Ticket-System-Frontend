@@ -1,4 +1,4 @@
-# Open Ticket System in JavaScript
+# Open Ticket System in TypeScript
 
 ![Angular 6.1.3](https://img.shields.io/badge/Angular%20SE-6.1.3-blue.svg)
 ![TypeScript 2.7.2](https://img.shields.io/badge/TypeScript-2.7.2-blue.svg)
@@ -33,28 +33,25 @@
 
 
 ###### Development server
-
+Run for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ```ng
 ng serve
 ```
-Run for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ###### Build
+Run to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 ```ng
 ng build
 ```
-Run to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
 ###### Running unit tests
+Run to execute the unit tests via [Karma](https://karma-runner.github.io).
 ```ng
 ng test
 ```
-Run to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 ```ng
 ng e2e
 ```
-Run to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ### Screenshot
 
 You can implement your own CSS styles, for example based on [foundation.zurb.com](https://foundation.zurb.com) or [getbootstrap.com](http://getbootstrap.com)
