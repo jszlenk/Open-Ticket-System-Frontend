@@ -40,7 +40,7 @@ ng serve
 ```ng
 ng build
 ```
-###### Run to execute the unit tests and  he end-to-end tests .
+###### Run to execute the unit tests and  the end-to-end tests.
 
 ```ng
 ng test
