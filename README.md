@@ -34,34 +34,29 @@
 
 ###### Development server
 
-Run:
 ```ng
 ng serve
 ```
-for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ###### Build
-Run:
 ```ng
 ng build
 ```
-
-to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ###### Running unit tests
-Run:
 ```ng
 ng test
 ```
-to execute the unit tests via [Karma](https://karma-runner.github.io).
-Run:
+Run to execute the unit tests via [Karma](https://karma-runner.github.io).
 ```ng
 ng e2e
 ```
-to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ### Screenshot
 
-You can implement CSS styles based on foundation.zurb.com or getbootstrap.com.
+You can implement your own CSS styles, for example based on [foundation.zurb.com](https://foundation.zurb.com) or [getbootstrap.com](http://getbootstrap.com)
 
 ![alt text](https://github.com/jszlenk/Open-Ticket-System-Frontend/blob/master/imges/ots.png)
