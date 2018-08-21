@@ -27,8 +27,6 @@
   * Karma
   * Protractor
   
-  *The application is compatible with MongoDB databases. Mongo version 3.4 and higher*
-
   ### Run App
 
 ###### Run for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -52,6 +50,6 @@ ng e2e
 ```
 ### Screenshot
 
-You can implement your own CSS styles, for example based on [foundation.zurb.com](https://foundation.zurb.com) or [getbootstrap.com](http://getbootstrap.com)
+  *You can implement your own CSS styles, for example based on [foundation.zurb.com](https://foundation.zurb.com) or [getbootstrap.com](http://getbootstrap.com)*
 
 ![alt text](https://github.com/jszlenk/Open-Ticket-System-Frontend/blob/master/imges/ots.png)
